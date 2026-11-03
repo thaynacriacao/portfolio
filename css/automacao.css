@@ -1,0 +1,1300 @@
+/* =========================================================
+   AUTOMAÇÃO
+   Página exclusiva do projeto Gestão de Produção
+========================================================== */
+
+
+/* =========================================================
+   1. BASE
+========================================================== */
+
+.automation-page{
+  background:var(--cream);
+}
+
+
+/* =========================================================
+   2. HERO
+========================================================== */
+
+.automation-hero{
+  position:relative;
+
+  padding:
+    150px 0
+    105px;
+
+  color:var(--cream);
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 82% 30%,
+      rgba(141,95,127,.24),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #17212a,
+      var(--bg-dark)
+    );
+}
+
+
+/* GRID DECORATIVO */
+
+.automation-hero::before{
+  content:"";
+
+  position:absolute;
+
+  width:680px;
+  height:680px;
+
+  right:-130px;
+  top:-80px;
+
+  background-image:
+
+    linear-gradient(
+      rgba(244,236,231,.05) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(244,236,231,.05) 1px,
+      transparent 1px
+    );
+
+  background-size:36px 36px;
+
+  mask-image:
+    radial-gradient(
+      circle,
+      black,
+      transparent 72%
+    );
+
+  pointer-events:none;
+}
+
+
+.automation-hero-grid{
+  display:grid;
+
+  grid-template-columns:
+    1.2fr .8fr;
+
+  gap:85px;
+
+  align-items:end;
+
+  position:relative;
+
+  z-index:2;
+}
+
+
+.automation-title{
+  margin:
+    20px 0
+    30px;
+
+  font-size:
+    clamp(
+      4rem,
+      8vw,
+      8.5rem
+    );
+
+  line-height:.84;
+}
+
+
+.automation-title span{
+  color:var(--mauve-soft);
+}
+
+
+.automation-intro{
+  max-width:650px;
+
+  margin:0;
+
+  color:
+    rgba(
+      244,
+      236,
+      231,
+      .74
+    );
+
+  font-size:1.05rem;
+
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   3. META
+========================================================== */
+
+.automation-meta{
+  border-top:
+    1px solid
+    rgba(244,236,231,.2);
+}
+
+
+.automation-meta-item{
+  display:grid;
+
+  grid-template-columns:
+    105px 1fr;
+
+  gap:20px;
+
+  padding:
+    18px 0;
+
+  border-bottom:
+    1px solid
+    rgba(244,236,231,.15);
+}
+
+
+.automation-meta-item span{
+  font-size:.67rem;
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+
+  opacity:.55;
+}
+
+
+.automation-meta-item strong{
+  font-size:.88rem;
+
+  line-height:1.4;
+}
+
+
+/* =========================================================
+   4. CAPA
+========================================================== */
+
+.automation-cover-section{
+  padding:
+    70px 0
+    45px;
+}
+
+
+.automation-cover{
+  width:100%;
+
+  overflow:hidden;
+
+  border-radius:38px;
+
+  background:#ffffff;
+
+  box-shadow:
+    0 28px 70px
+    rgba(15,25,35,.17);
+}
+
+
+.automation-cover img{
+  display:block;
+
+  width:100%;
+
+  height:auto;
+
+  max-width:100%;
+
+  object-fit:contain;
+}
+
+
+/* =========================================================
+   5. SEÇÕES GERAIS
+========================================================== */
+
+.automation-section{
+  padding:
+    110px 0;
+}
+
+
+.automation-text-grid{
+  display:grid;
+
+  grid-template-columns:
+    .7fr 1.3fr;
+
+  gap:85px;
+}
+
+
+.automation-section-title{
+  position:sticky;
+
+  top:125px;
+
+  align-self:start;
+}
+
+
+.automation-section-title > span{
+  display:block;
+
+  margin-bottom:18px;
+
+  color:var(--mauve);
+
+  font-size:.7rem;
+
+  font-weight:800;
+
+  letter-spacing:.18em;
+}
+
+
+.automation-section-title h2{
+  margin:0;
+
+  font-size:
+    clamp(
+      3rem,
+      5vw,
+      5.5rem
+    );
+}
+
+
+.automation-copy{
+  max-width:700px;
+}
+
+
+.automation-copy p{
+  margin:
+    0 0
+    24px;
+
+  color:#51545a;
+
+  font-size:
+    clamp(
+      1.03rem,
+      1.4vw,
+      1.18rem
+    );
+
+  line-height:1.8;
+}
+
+
+/* =========================================================
+   6. CABEÇALHOS
+========================================================== */
+
+.automation-heading{
+  display:grid;
+
+  grid-template-columns:
+    1fr .8fr;
+
+  gap:80px;
+
+  align-items:end;
+
+  margin-bottom:68px;
+}
+
+
+.automation-heading h2{
+  margin:
+    18px 0
+    0;
+
+  font-size:
+    clamp(
+      3.4rem,
+      5.8vw,
+      6rem
+    );
+}
+
+
+.automation-heading h2 span{
+  color:var(--mauve-soft);
+}
+
+
+.automation-heading > p{
+  max-width:520px;
+
+  margin:0;
+
+  font-size:1rem;
+
+  line-height:1.7;
+
+  opacity:.75;
+}
+
+
+.automation-heading-light > p{
+  color:#5d6065;
+
+  opacity:1;
+}
+
+
+/* =========================================================
+   7. SOLUÇÃO
+========================================================== */
+
+.automation-solution-section{
+  padding:
+    105px 0
+    120px;
+
+  color:var(--cream);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--bg-dark),
+      #17212a
+    );
+}
+
+
+/* =========================================================
+   FLUXO
+========================================================== */
+
+.system-flow{
+  display:grid;
+
+  grid-template-columns:
+    1fr auto 1fr auto 1.4fr;
+
+  gap:18px;
+
+  align-items:center;
+}
+
+
+.system-card{
+  min-height:180px;
+
+  padding:28px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:flex-end;
+
+  border-radius:28px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .06
+    );
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .11
+    );
+}
+
+
+.system-card-main{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(141,95,127,.52),
+      rgba(110,63,96,.30)
+    );
+}
+
+
+.system-number{
+  margin-bottom:auto;
+
+  font-size:.7rem;
+
+  letter-spacing:.16em;
+
+  opacity:.55;
+}
+
+
+.system-card strong{
+  margin-bottom:6px;
+
+  font-family:var(--font-display);
+
+  font-size:1.7rem;
+}
+
+
+.system-card span{
+  font-size:.78rem;
+
+  opacity:.65;
+}
+
+
+.flow-arrow{
+  font-size:1.7rem;
+
+  color:var(--mauve-soft);
+}
+
+
+.system-output{
+  display:grid;
+
+  gap:10px;
+}
+
+
+.system-output .system-card{
+  min-height:100px;
+
+  padding:20px 22px;
+}
+
+
+/* =========================================================
+   8. COMO FUNCIONA
+========================================================== */
+
+.automation-steps{
+  display:grid;
+
+  grid-template-columns:
+    repeat(5,1fr);
+
+  gap:12px;
+}
+
+
+.automation-step{
+  min-height:260px;
+
+  padding:26px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:26px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .28
+    );
+
+  display:flex;
+
+  flex-direction:column;
+}
+
+
+.automation-step > span{
+  margin-bottom:auto;
+
+  color:var(--mauve);
+
+  font-size:.72rem;
+
+  font-weight:800;
+
+  letter-spacing:.16em;
+}
+
+
+.automation-step strong{
+  margin-bottom:10px;
+
+  font-size:1.1rem;
+}
+
+
+.automation-step p{
+  margin:0;
+
+  color:var(--muted);
+
+  font-size:.8rem;
+
+  line-height:1.5;
+}
+
+
+/* =========================================================
+   9. TECNOLOGIAS
+========================================================== */
+
+.automation-tech-section{
+  padding:
+    105px 0
+    120px;
+
+  color:var(--cream);
+
+  background:
+    linear-gradient(
+      135deg,
+      #5f3a54,
+      var(--mauve-dark)
+    );
+}
+
+
+.tech-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:14px;
+}
+
+
+.tech-card{
+  min-height:170px;
+
+  padding:24px;
+
+  border-radius:25px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:space-between;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .14
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .06
+    );
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+
+.tech-card:hover{
+  transform:translateY(-5px);
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .1
+    );
+}
+
+
+.tech-card span{
+  font-size:.7rem;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+
+  opacity:.58;
+}
+
+
+.tech-card strong{
+  font-family:var(--font-display);
+
+  font-size:1.75rem;
+}
+
+
+/* =========================================================
+   10. SHOWCASE N8N
+========================================================== */
+
+.automation-showcase-section{
+  padding:
+    115px 0;
+
+  background:var(--cream);
+}
+
+
+.automation-showcase-heading{
+  display:grid;
+
+  grid-template-columns:
+    50px 1fr .9fr;
+
+  gap:32px;
+
+  align-items:end;
+
+  margin-bottom:55px;
+}
+
+
+.automation-showcase-heading > span{
+  color:var(--mauve);
+
+  font-size:.72rem;
+
+  font-weight:800;
+
+  letter-spacing:.16em;
+}
+
+
+.automation-showcase-heading h2{
+  margin:
+    16px 0
+    0;
+
+  font-size:
+    clamp(
+      3rem,
+      5vw,
+      5.4rem
+    );
+}
+
+
+.automation-showcase-heading p{
+  margin:0;
+
+  color:#575a60;
+
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   BROWSER
+========================================================== */
+
+.browser-frame{
+  overflow:hidden;
+
+  border-radius:30px;
+
+  background:#111821;
+
+  box-shadow:
+    0 30px 80px
+    rgba(15,25,35,.20);
+}
+
+
+.browser-bar{
+  min-height:58px;
+
+  padding:
+    0 22px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  background:#202b36;
+}
+
+
+.browser-bar > span{
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .35
+    );
+}
+
+
+.browser-address{
+  margin-left:14px;
+
+  padding:
+    7px 18px;
+
+  border-radius:999px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .07
+    );
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .6
+    );
+
+  font-size:.72rem;
+}
+
+
+.browser-content{
+  width:100%;
+
+  background:#151d26;
+}
+
+
+.browser-content img{
+  display:block;
+
+  width:100%;
+
+  height:auto;
+
+  max-width:100%;
+
+  object-fit:contain;
+}
+
+
+/* =========================================================
+   11. DADOS
+========================================================== */
+
+.automation-data-section{
+  padding:
+    105px 0
+    120px;
+
+  background:#ede3dd;
+}
+
+
+.data-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:22px;
+}
+
+
+.data-card{
+  overflow:hidden;
+
+  border-radius:30px;
+
+  background:var(--cream);
+
+  box-shadow:
+    0 20px 50px
+    rgba(15,25,35,.10);
+}
+
+
+.data-card-header{
+  padding:
+    25px 28px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  border-bottom:
+    1px solid
+    var(--line);
+}
+
+
+.data-card-header span{
+  color:var(--muted);
+
+  font-size:.72rem;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+}
+
+
+.data-card-header strong{
+  font-size:1rem;
+}
+
+
+.data-card-image{
+  width:100%;
+
+  background:#ffffff;
+}
+
+
+.data-card-image img{
+  display:block;
+
+  width:100%;
+
+  height:auto;
+
+  max-width:100%;
+
+  object-fit:contain;
+}
+
+
+/* =========================================================
+   12. DASHBOARD
+========================================================== */
+
+.automation-dashboard-section{
+  padding:
+    120px 0;
+
+  color:var(--cream);
+
+  background:
+    linear-gradient(
+      135deg,
+      #17212a,
+      var(--bg-dark)
+    );
+}
+
+
+.automation-dashboard-heading{
+  display:grid;
+
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap:90px;
+
+  align-items:end;
+
+  margin-bottom:60px;
+}
+
+
+.automation-dashboard-heading h2{
+  margin:
+    18px 0
+    0;
+
+  font-size:
+    clamp(
+      3.7rem,
+      6vw,
+      6.3rem
+    );
+}
+
+
+.automation-dashboard-heading h2 span{
+  color:var(--mauve-soft);
+}
+
+
+.automation-dashboard-heading p{
+  max-width:560px;
+
+  margin:
+    0 0
+    18px;
+
+  color:
+    rgba(
+      244,
+      236,
+      231,
+      .72
+    );
+
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   FRAME DASHBOARD
+========================================================== */
+
+.dashboard-frame{
+  overflow:hidden;
+
+  border-radius:32px;
+
+  background:white;
+
+  box-shadow:
+    0 35px 90px
+    rgba(
+      0,
+      0,
+      0,
+      .25
+    );
+}
+
+
+.dashboard-frame-top{
+  min-height:60px;
+
+  padding:
+    0 25px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .75
+    );
+
+  background:#273340;
+
+  font-size:.74rem;
+
+  letter-spacing:.08em;
+}
+
+
+.dashboard-frame-image{
+  width:100%;
+
+  background:#f4f5f7;
+}
+
+
+.dashboard-frame-image img{
+  display:block;
+
+  width:100%;
+
+  height:auto;
+
+  max-width:100%;
+
+  object-fit:contain;
+}
+
+
+/* =========================================================
+   13. RESULTADO
+========================================================== */
+
+.automation-result-section{
+  padding:
+    115px 0;
+
+  background:var(--cream);
+}
+
+
+.automation-result-grid{
+  display:grid;
+
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap:90px;
+
+  align-items:center;
+}
+
+
+.automation-result-title h2{
+  margin:
+    18px 0
+    0;
+
+  font-size:
+    clamp(
+      3.5rem,
+      5.5vw,
+      6rem
+    );
+}
+
+
+.automation-result-title h2 span{
+  color:var(--mauve);
+}
+
+
+.automation-result-content > p{
+  margin:
+    0 0
+    42px;
+
+  color:#56595e;
+
+  font-size:1.06rem;
+
+  line-height:1.75;
+}
+
+
+.result-points{
+  border-top:
+    1px solid
+    var(--line);
+}
+
+
+.result-points > div{
+  display:grid;
+
+  grid-template-columns:
+    150px 1fr;
+
+  gap:20px;
+
+  padding:
+    18px 0;
+
+  border-bottom:
+    1px solid
+    var(--line);
+}
+
+
+.result-points strong{
+  font-size:.88rem;
+}
+
+
+.result-points span{
+  color:var(--muted);
+
+  font-size:.82rem;
+}
+
+
+/* =========================================================
+   14. TABLET
+========================================================== */
+
+@media (max-width:950px){
+
+  .automation-hero-grid,
+  .automation-text-grid,
+  .automation-heading,
+  .automation-dashboard-heading,
+  .automation-result-grid{
+    grid-template-columns:1fr;
+  }
+
+
+  .automation-hero-grid{
+    gap:48px;
+  }
+
+
+  .automation-section-title{
+    position:static;
+  }
+
+
+  .system-flow{
+    grid-template-columns:1fr;
+
+    gap:14px;
+  }
+
+
+  .flow-arrow{
+    transform:rotate(90deg);
+
+    text-align:center;
+  }
+
+
+  .system-output{
+    grid-template-columns:
+      repeat(3,1fr);
+  }
+
+
+  .automation-steps{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+
+  .tech-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+
+  .automation-showcase-heading{
+    grid-template-columns:1fr;
+  }
+
+
+  .data-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+/* =========================================================
+   15. CELULAR
+========================================================== */
+
+@media (max-width:620px){
+
+  .automation-hero{
+    padding:
+      112px 0
+      70px;
+  }
+
+
+  .automation-title{
+    font-size:
+      clamp(
+        3.5rem,
+        17vw,
+        5rem
+      );
+  }
+
+
+  .automation-cover{
+    border-radius:24px;
+  }
+
+
+  .automation-section,
+  .automation-solution-section,
+  .automation-tech-section,
+  .automation-showcase-section,
+  .automation-data-section,
+  .automation-dashboard-section,
+  .automation-result-section{
+    padding:
+      75px 0;
+  }
+
+
+  .system-output{
+    grid-template-columns:1fr;
+  }
+
+
+  .automation-steps{
+    grid-template-columns:1fr;
+  }
+
+
+  .automation-step{
+    min-height:210px;
+  }
+
+
+  .tech-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+
+  .tech-card{
+    min-height:140px;
+  }
+
+
+  .browser-frame{
+    border-radius:22px;
+  }
+
+
+  .browser-address{
+    max-width:180px;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    text-overflow:ellipsis;
+  }
+
+
+  .data-card{
+    border-radius:22px;
+  }
+
+
+  .dashboard-frame{
+    border-radius:22px;
+  }
+
+
+  .result-points > div{
+    grid-template-columns:1fr;
+
+    gap:6px;
+  }
+
+}

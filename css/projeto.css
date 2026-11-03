@@ -1,0 +1,1044 @@
+/* =========================================================
+   PÁGINAS DE PROJETO
+   projeto.css
+========================================================== */
+
+
+/* =========================================================
+   1. BASE DA PÁGINA
+========================================================== */
+
+.project-page{
+  background:var(--cream);
+  color:var(--ink);
+}
+
+
+/* =========================================================
+   2. HEADER NA PÁGINA DE PROJETO
+========================================================== */
+
+.project-page header{
+  background:rgba(31,42,53,.86);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+
+/* =========================================================
+   3. ABERTURA DO PROJETO
+========================================================== */
+
+.project-hero{
+  position:relative;
+
+  padding:
+    150px 0
+    92px;
+
+  background:
+    radial-gradient(
+      circle at 78% 25%,
+      rgba(141,95,127,.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      var(--bg-dark),
+      #17212a
+    );
+
+  color:var(--cream);
+
+  overflow:hidden;
+}
+
+
+/* GRID DECORATIVO */
+
+.project-hero::after{
+  content:"";
+
+  position:absolute;
+
+  width:520px;
+  height:520px;
+
+  right:-80px;
+  top:80px;
+
+  background-image:
+    linear-gradient(
+      rgba(244,236,231,.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(244,236,231,.045) 1px,
+      transparent 1px
+    );
+
+  background-size:36px 36px;
+
+  mask-image:
+    radial-gradient(
+      circle,
+      black,
+      transparent 70%
+    );
+
+  pointer-events:none;
+}
+
+
+/* VOLTAR */
+
+.project-back{
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  margin-bottom:62px;
+
+  font-size:.8rem;
+
+  font-weight:700;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+
+  opacity:.75;
+
+  transition:.2s ease;
+}
+
+.project-back:hover{
+  opacity:1;
+
+  transform:translateX(-4px);
+}
+
+
+/* GRID DA ABERTURA */
+
+.project-hero-grid{
+  display:grid;
+
+  grid-template-columns:
+    1.25fr .75fr;
+
+  gap:80px;
+
+  align-items:end;
+
+  position:relative;
+
+  z-index:2;
+}
+
+
+/* TEXTO */
+
+.project-hero-copy{
+  max-width:760px;
+}
+
+.project-title{
+  margin:
+    18px 0
+    28px;
+
+  font-size:
+    clamp(
+      4.5rem,
+      9vw,
+      9rem
+    );
+
+  line-height:.82;
+}
+
+.project-intro{
+  max-width:620px;
+
+  margin:0;
+
+  font-size:1.05rem;
+
+  line-height:1.7;
+
+  color:
+    rgba(
+      244,
+      236,
+      231,
+      .74
+    );
+}
+
+
+/* =========================================================
+   4. INFORMAÇÕES DO PROJETO
+========================================================== */
+
+.project-meta{
+  display:grid;
+
+  gap:0;
+
+  border-top:
+    1px solid
+    rgba(244,236,231,.2);
+}
+
+.project-meta-item{
+  padding:
+    18px 0;
+
+  display:grid;
+
+  grid-template-columns:
+    110px 1fr;
+
+  gap:20px;
+
+  border-bottom:
+    1px solid
+    rgba(244,236,231,.16);
+}
+
+.project-meta-item span{
+  font-size:.68rem;
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+
+  opacity:.55;
+}
+
+.project-meta-item strong{
+  font-size:.88rem;
+
+  font-weight:600;
+
+  line-height:1.4;
+}
+
+
+/* =========================================================
+   5. CAPA PRINCIPAL
+========================================================== */
+
+.project-cover-section{
+  padding:
+    72px 0
+    48px;
+
+  background:var(--cream);
+}
+
+.project-cover{
+  position:relative;
+
+  width:100%;
+
+  min-height:620px;
+
+  border-radius:38px;
+
+  overflow:hidden;
+
+  background:var(--bg-dark-2);
+
+  box-shadow:
+    0 28px 70px
+    rgba(15,25,35,.16);
+}
+
+.project-cover img{
+  width:100%;
+  height:100%;
+
+  min-height:620px;
+
+  object-fit:cover;
+
+  object-position:center;
+}
+
+
+/* =========================================================
+   6. BLOCOS DE TEXTO
+========================================================== */
+
+.project-content-section{
+  padding:
+    105px 0;
+
+  background:var(--cream);
+}
+
+.project-text-grid{
+  display:grid;
+
+  grid-template-columns:
+    .72fr 1.28fr;
+
+  gap:80px;
+
+  align-items:start;
+}
+
+
+/* TÍTULO DA SEÇÃO */
+
+.project-section-heading{
+  position:sticky;
+
+  top:130px;
+}
+
+.project-section-heading > span{
+  display:block;
+
+  margin-bottom:18px;
+
+  font-size:.7rem;
+
+  font-weight:800;
+
+  letter-spacing:.18em;
+
+  color:var(--mauve);
+}
+
+.project-section-heading h2{
+  margin:0;
+
+  font-size:
+    clamp(
+      3rem,
+      5vw,
+      5.5rem
+    );
+}
+
+
+/* TEXTO */
+
+.project-section-text{
+  max-width:680px;
+}
+
+.project-section-text p{
+  margin:
+    0 0
+    25px;
+
+  font-size:
+    clamp(
+      1.02rem,
+      1.4vw,
+      1.18rem
+    );
+
+  line-height:1.8;
+
+  color:#51545a;
+}
+
+.project-section-text p:last-child{
+  margin-bottom:0;
+}
+
+
+/* =========================================================
+   7. MINHA PARTICIPAÇÃO
+========================================================== */
+
+.project-role-section{
+  padding:
+    42px 0
+    110px;
+
+  background:var(--cream);
+}
+
+.project-role-box{
+  display:grid;
+
+  grid-template-columns:
+    .85fr 1.15fr;
+
+  gap:80px;
+
+  align-items:center;
+
+  padding:
+    70px 72px;
+
+  border-radius:42px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--bg-dark),
+      #17212a
+    );
+
+  color:var(--cream);
+
+  box-shadow:
+    0 28px 70px
+    rgba(15,25,35,.16);
+}
+
+
+/* TÍTULO */
+
+.project-role-box h2{
+  margin:
+    18px 0 0;
+
+  font-size:
+    clamp(
+      3.1rem,
+      5vw,
+      5.8rem
+    );
+}
+
+.project-role-box h2 span{
+  color:var(--mauve-soft);
+}
+
+
+/* LISTA */
+
+.project-role-list{
+  border-top:
+    1px solid
+    rgba(244,236,231,.17);
+}
+
+.project-role-item{
+  display:grid;
+
+  grid-template-columns:
+    48px 1fr;
+
+  gap:18px;
+
+  align-items:center;
+
+  padding:
+    20px 0;
+
+  border-bottom:
+    1px solid
+    rgba(244,236,231,.15);
+}
+
+.project-role-item > span{
+  color:var(--mauve-soft);
+
+  font-size:.72rem;
+
+  font-weight:800;
+
+  letter-spacing:.12em;
+}
+
+.project-role-item p{
+  margin:0;
+
+  font-size:.96rem;
+
+  line-height:1.5;
+
+  color:
+    rgba(
+      244,
+      236,
+      231,
+      .84
+    );
+}
+
+
+/* =========================================================
+   8. GALERIA
+========================================================== */
+
+.project-gallery-section{
+  padding:
+    20px 0
+    110px;
+
+  background:var(--cream);
+}
+
+.project-gallery{
+  display:grid;
+
+  gap:22px;
+}
+
+
+/* IMAGEM GRANDE */
+
+.project-gallery-main{
+  min-height:650px;
+
+  border-radius:38px;
+
+  overflow:hidden;
+
+  background:var(--cream-2);
+
+  box-shadow:
+    0 20px 55px
+    rgba(15,25,35,.12);
+}
+
+.project-gallery-main img{
+  width:100%;
+  height:100%;
+
+  min-height:650px;
+
+  object-fit:cover;
+
+  transition:
+    transform .7s
+    cubic-bezier(.2,.8,.2,1);
+}
+
+.project-gallery-main:hover img{
+  transform:scale(1.02);
+}
+
+
+/* CASO DEPOIS TENHAMOS 2 FOTOS LADO A LADO */
+
+.project-gallery-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:22px;
+}
+
+.project-gallery-item{
+  min-height:500px;
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+  background:var(--cream-2);
+}
+
+.project-gallery-item img{
+  width:100%;
+  height:100%;
+
+  min-height:500px;
+
+  object-fit:cover;
+}
+
+
+/* =========================================================
+   9. RESULTADO
+========================================================== */
+
+.project-result-section{
+  padding:
+    105px 0
+    120px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--bg-dark),
+      #18222c
+    );
+
+  color:var(--cream);
+}
+
+.project-result-grid{
+  display:grid;
+
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap:80px;
+
+  align-items:center;
+}
+
+
+/* TÍTULO */
+
+.project-result-title h2{
+  margin:
+    18px 0 0;
+
+  font-size:
+    clamp(
+      3.4rem,
+      5.5vw,
+      6rem
+    );
+}
+
+.project-result-title h2 span{
+  color:var(--mauve-soft);
+}
+
+
+/* TEXTO */
+
+.project-result-text{
+  max-width:620px;
+}
+
+.project-result-text p{
+  margin:0;
+
+  font-size:
+    clamp(
+      1.05rem,
+      1.5vw,
+      1.25rem
+    );
+
+  line-height:1.75;
+
+  color:
+    rgba(
+      244,
+      236,
+      231,
+      .76
+    );
+}
+
+
+/* =========================================================
+   10. NAVEGAÇÃO ENTRE PROJETOS
+========================================================== */
+
+.project-navigation{
+  padding:
+    85px 0;
+
+  background:var(--cream);
+}
+
+.project-navigation-inner{
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  border-bottom:
+    1px solid
+    var(--line);
+}
+
+
+/* LINKS */
+
+.project-navigation a{
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  min-height:150px;
+
+  padding:
+    28px 34px;
+
+  transition:
+    .25s ease;
+}
+
+
+/* DIVISÃO */
+
+.project-navigation-back{
+  border-right:
+    1px solid
+    var(--line);
+}
+
+.project-navigation-next{
+  text-align:right;
+
+  align-items:flex-end;
+}
+
+
+/* TEXTOS */
+
+.project-navigation small{
+  display:block;
+
+  margin-bottom:10px;
+
+  font-size:.68rem;
+
+  letter-spacing:.16em;
+
+  text-transform:uppercase;
+
+  color:var(--muted);
+}
+
+.project-navigation strong{
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(
+      1.4rem,
+      2vw,
+      2rem
+    );
+
+  line-height:1.1;
+}
+
+
+/* HOVER */
+
+.project-navigation a:hover{
+  background:var(--mauve-dark);
+
+  color:var(--cream);
+}
+
+.project-navigation a:hover small{
+  color:
+    rgba(
+      244,
+      236,
+      231,
+      .65
+    );
+}
+
+
+/* =========================================================
+   11. FOOTER DA PÁGINA
+========================================================== */
+
+.project-page footer a{
+  transition:.2s ease;
+}
+
+.project-page footer a:hover{
+  color:var(--cream);
+}
+
+
+/* =========================================================
+   12. RESPONSIVO — TABLET
+========================================================== */
+
+@media (max-width:950px){
+
+  .project-hero{
+    padding:
+      130px 0
+      75px;
+  }
+
+
+  .project-hero-grid{
+    grid-template-columns:1fr;
+
+    gap:48px;
+  }
+
+
+  .project-title{
+    font-size:
+      clamp(
+        4.2rem,
+        13vw,
+        7rem
+      );
+  }
+
+
+  .project-meta{
+    max-width:620px;
+  }
+
+
+  .project-cover,
+  .project-cover img{
+    min-height:500px;
+  }
+
+
+  .project-text-grid{
+    grid-template-columns:1fr;
+
+    gap:40px;
+  }
+
+
+  .project-section-heading{
+    position:static;
+  }
+
+
+  .project-role-box{
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+    padding:
+      58px 48px;
+  }
+
+
+  .project-gallery-main,
+  .project-gallery-main img{
+    min-height:520px;
+  }
+
+
+  .project-result-grid{
+    grid-template-columns:1fr;
+
+    gap:42px;
+  }
+
+}
+
+
+/* =========================================================
+   13. RESPONSIVO — CELULAR
+========================================================== */
+
+@media (max-width:620px){
+
+  .project-hero{
+    padding:
+      112px 0
+      58px;
+  }
+
+
+  .project-back{
+    margin-bottom:42px;
+  }
+
+
+  .project-title{
+    font-size:
+      clamp(
+        3.6rem,
+        18vw,
+        5.3rem
+      );
+
+    margin-bottom:24px;
+  }
+
+
+  .project-intro{
+    font-size:.96rem;
+  }
+
+
+  /* META */
+
+  .project-meta-item{
+    grid-template-columns:
+      90px 1fr;
+
+    gap:14px;
+  }
+
+
+  /* CAPA */
+
+  .project-cover-section{
+    padding:
+      40px 0
+      20px;
+  }
+
+
+  .project-cover{
+    min-height:360px;
+
+    border-radius:24px;
+  }
+
+
+  .project-cover img{
+    min-height:360px;
+  }
+
+
+  /* TEXTOS */
+
+  .project-content-section{
+    padding:
+      72px 0;
+  }
+
+
+  .project-text-grid{
+    gap:32px;
+  }
+
+
+  .project-section-heading h2{
+    font-size:
+      clamp(
+        2.8rem,
+        14vw,
+        4rem
+      );
+  }
+
+
+  .project-section-text p{
+    font-size:1rem;
+  }
+
+
+  /* MINHA PARTICIPAÇÃO */
+
+  .project-role-section{
+    padding:
+      20px 0
+      76px;
+  }
+
+
+  .project-role-box{
+    padding:
+      42px 24px;
+
+    border-radius:28px;
+  }
+
+
+  .project-role-box h2{
+    font-size:
+      clamp(
+        2.8rem,
+        14vw,
+        4.3rem
+      );
+  }
+
+
+  /* GALERIA */
+
+  .project-gallery-section{
+    padding:
+      0 0
+      76px;
+  }
+
+
+  .project-gallery-main{
+    min-height:360px;
+
+    border-radius:24px;
+  }
+
+
+  .project-gallery-main img{
+    min-height:360px;
+  }
+
+
+  .project-gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+
+  .project-gallery-item,
+  .project-gallery-item img{
+    min-height:360px;
+  }
+
+
+  /* RESULTADO */
+
+  .project-result-section{
+    padding:
+      76px 0;
+  }
+
+
+  .project-result-title h2{
+    font-size:
+      clamp(
+        3rem,
+        14vw,
+        4.5rem
+      );
+  }
+
+
+  /* NAVEGAÇÃO */
+
+  .project-navigation{
+    padding:
+      55px 0;
+  }
+
+
+  .project-navigation-inner{
+    grid-template-columns:1fr;
+  }
+
+
+  .project-navigation-back{
+    border-right:0;
+
+    border-bottom:
+      1px solid
+      var(--line);
+  }
+
+
+  .project-navigation-next{
+    text-align:left;
+
+    align-items:flex-start;
+  }
+
+
+  .project-navigation a{
+    min-height:120px;
+
+    padding:
+      25px 20px;
+  }
+
+}
